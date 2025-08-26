@@ -29,7 +29,7 @@ class CommentForm extends Component
         return [
             'comment' => 'required|string|max:1000',
             'attachments' => 'nullable|array',
-            'attachments.*' => 'required|file|max:'.config('comments.max_upload_size'),
+            'attachments.*' => 'required|mimes:jpeg,png,jpg,gif,svg|max:' . config('comments.max_upload_size'),
             'guestName' => Auth::id() ? 'nullable' : 'required',
             'guestEmail' => Auth::id() ? 'nullable' : 'required',
         ];

@@ -53,7 +53,7 @@
         {{-- Attachments --}}
         @if ($this->checkAllowImageUpload)
             <div>
-                <input type="file" wire:model="attachments" multiple class="rounded-md dark:bg-indigo-600 bg-gray-600 cursor-pointer px-5 py-2 text-sm leading-5 font-semibold dark:text-white text-gray-100 dark:hover:bg-indigo-700 hover:bg-gray-700 focus:outline-2 focus:outline-offset-2 dark:focus:outline-indigo-500 dark:active:bg-indigo-700 focus:outline-gray-500 active:bg-gray-700">
+                <input type="file" accept=".png, .jpeg, .jpg, .gif" wire:model="attachments" multiple class="rounded-md dark:bg-indigo-600 bg-gray-600 cursor-pointer px-5 py-2 text-sm leading-5 font-semibold dark:text-white text-gray-100 dark:hover:bg-indigo-700 hover:bg-gray-700 focus:outline-2 focus:outline-offset-2 dark:focus:outline-indigo-500 dark:active:bg-indigo-700 focus:outline-gray-500 active:bg-gray-700">
                 @error('attachments.*') 
                     <p class="text-red-500 text-sm mt-1">{{ $message }}</p> 
                 @enderror

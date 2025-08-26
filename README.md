@@ -48,7 +48,19 @@ php artisan vendor:publish --tag="comment-view"
 ```
 
 ---
+## ⚙️ Run Migrations
+To run migration run the below command
+```bash
+php artisan migrate
+```
 
+Next Step: 
+
+> ```bash
+> npm run build
+> ```
+
+---
 ## 🚀 Usage  
 
 Adding the comment system to your project is **super simple**.  
@@ -57,12 +69,6 @@ Just drop this line into your Blade file (e.g., under your blog post):
 >```blade
 ><livewire:comments :model="$post" />
 >```
-
-## Next Step: 
-
-> ```bash
-> npm run build
-> ```
 
 That’s it! 🎉  
 Now every post will have its own **dynamic comment section**.  

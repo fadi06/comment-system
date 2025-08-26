@@ -22,7 +22,7 @@ This package allows your users to engage with your content effortlessly, while g
 Clone the package into your Laravel project:  
 
 ```bash
-composer require fawad/comment-system
+composer require fawad/laravel-comments
 ```
 
 Or install directly from GitHub:  

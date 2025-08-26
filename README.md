@@ -22,7 +22,7 @@ This package allows your users to engage with your content effortlessly, while g
 Clone the package into your Laravel project:  
 
 ```bash
-composer require fadi06/comment-system
+composer require fawad/comment-system
 ```
 
 Or install directly from GitHub:  
@@ -38,7 +38,13 @@ git clone https://github.com/fadi06/comment-system.git
 To customize the configuration, publish the vendor files:  
 
 ```bash
-php artisan vendor:publish --tag="comment-system-config"
+php artisan vendor:publish --tag="comment-config"
+```
+
+Next Step: 
+
+```bash
+php artisan vendor:publish --tag="comment-view"
 ```
 
 ---
@@ -46,11 +52,17 @@ php artisan vendor:publish --tag="comment-system-config"
 ## 🚀 Usage  
 
 Adding the comment system to your project is **super simple**.  
-Just drop this line into your Blade file (e.g., under your blog post):  
+Just drop this line into your Blade file (e.g., under your blog post):   
 
-```blade
-<livewire:comment-list :post="$post" />
-```
+>```blade
+><livewire:comments :model="$post" />
+>```
+
+## Next Step: 
+
+> ```bash
+> npm run build
+> ```
 
 That’s it! 🎉  
 Now every post will have its own **dynamic comment section**.  

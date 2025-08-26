@@ -24,12 +24,12 @@ class LaravelCommentsServiceProvider extends ServiceProvider
         // Publish config
         $this->publishes([
             __DIR__ . '/../config/comments.php' => config_path('comments.php'),
-        ], 'config');
+        ], 'comment-config');
 
         // Publish views
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/comments'),
-        ], 'views');
+        ], 'comment-views');
 
         // Register Livewire components
         Livewire::component('comments-form', CommentForm::class);

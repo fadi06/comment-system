@@ -30,6 +30,8 @@ class CommentForm extends Component
             'comment' => 'required|string|max:1000',
             'attachments' => 'nullable|array',
             'attachments.*' => 'required|file|max:'.config('comments.max_upload_size'),
+            'guestName' => Auth::id() ? 'nullable' : 'required',
+            'guestEmail' => Auth::id() ? 'nullable' : 'required',
         ];
     }
 

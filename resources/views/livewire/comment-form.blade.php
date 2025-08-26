@@ -12,18 +12,30 @@
         @endif
         <div>
             @if (config('comments.allow_guest_for_commit'))
-                <div class="flex gap-3 w-full mb-3">
-                    <input 
-                        class="w-1/2 border flex-1 border-gray-300 rounded-xl p-3 focus:ring focus:ring-indigo-200 focus:border-indigo-400" 
-                        wire:model="guestName" 
-                        placeholder="Enter your name"
-                    />
-                    <input 
-                        class="w-1/2 border flex-1 border-gray-300 rounded-xl p-3 focus:ring focus:ring-indigo-200 focus:border-indigo-400" 
-                        wire:model="guestEmail" 
-                        placeholder="Enter your email"
-                    />
-                </div>
+                @guest
+                    <div class="flex gap-3 w-full mb-3">
+                        <span class="w-1/2">
+                            <input 
+                                class="flex w-full border flex-1 border-gray-300 rounded-xl p-3 focus:ring focus:ring-indigo-200 focus:border-indigo-400" 
+                                wire:model="guestName" 
+                                placeholder="Enter your name"
+                            />
+                            @error('guestName') 
+                                <p class="text-red-500 text-sm mt-1">{{ $message }}</p> 
+                            @enderror
+                        </span>
+                        <div class="w-1/2">
+                            <input 
+                                class="flex w-full border flex-1 border-gray-300 rounded-xl p-3 focus:ring focus:ring-indigo-200 focus:border-indigo-400" 
+                                wire:model="guestEmail" 
+                                placeholder="Enter your email"
+                            />
+                            @error('guestEmail') 
+                                <p class="text-red-500 text-sm mt-1">{{ $message }}</p> 
+                            @enderror
+                        </div>
+                    </div>
+                @endguest
             @endif
 
             <textarea

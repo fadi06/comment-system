@@ -92,7 +92,7 @@ return view('post.show', compact('post'));
 
 ```blade
 {{-- Inside your Blade --}}
-<livewire:comment-list :post="$post" />
+<livewire:comments :model="$post" />
 ```
 
 Now your users can start commenting on posts instantly.  

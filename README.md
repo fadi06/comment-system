@@ -112,6 +112,16 @@ If you’d like to add features, fix bugs, or improve documentation:
 
 ---
 
-## 📜 License  
+## 🔔 Note  
+If the preview view does not appear in your Blade file, publish the vendor views using:  
 
-This package is open-sourced under the [MIT license](LICENSE).  
+```bash
+php artisan vendor:publish --tag=laravel-comments-views
+```  
+
+Then run the build command again:  
+
+```bash
+npm run build
+```
+

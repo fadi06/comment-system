@@ -1,0 +1,32 @@
+{
+    "name": "fawad/laravel-comments",
+    "description": "A Laravel package that provides a TALL-stack powered comment system with replies, attachments, and voting.",
+    "keywords": ["laravel", "comments", "tall", "livewire", "tailwind", "alpinejs"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fawad Hassan",
+            "email": "laraveldailytips@gmail.com"
+        }
+    ],
+    "require": {
+        "livewire/livewire": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fawad\\LaravelComments\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fawad\\LaravelComments\\LaravelCommentsServiceProvider"
+            ],
+            "aliases": {
+                "Comments": "Fawad\\LaravelComments\\Facades\\Comments"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

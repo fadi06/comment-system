@@ -1,0 +1,20 @@
+{
+    "name": "laravel-comments",
+    "version": "1.0.0",
+    "description": "TALL stack powered comments system for Laravel",
+    "author": "Fawad Hassan",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "postcss": "^8.4.0",
+        "tailwindcss": "^3.4.0",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "alpinejs": "^3.13.0"
+    }
+}

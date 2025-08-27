@@ -17,6 +17,16 @@ This package allows your users to engage with your content effortlessly, while g
 
 ---
 
+## ⚙️ Requirements  
+
+To use this package, make sure your project meets the following minimum requirements:  
+
+- **PHP**: >= 8.2  
+- **Laravel**: >= 11.x  
+- **Livewire**: >= 3.x  
+
+---
+
 ## 📦 Installation  
 
 Clone the package into your Laravel project:  
@@ -59,6 +69,12 @@ Next Step:
 > ```bash
 > npm run build
 > ```
+
+or add cdn link
+
+>```bash
+><script src="https://cdn.tailwindcss.com"></script>
+>````
 
 ---
 ## 🚀 Usage  
@@ -114,20 +130,7 @@ If you’d like to add features, fix bugs, or improve documentation:
 2. Create your feature branch (`git checkout -b feature/YourFeature`)  
 3. Commit your changes (`git commit -m 'Add some feature'`)  
 4. Push to the branch (`git push origin feature/YourFeature`)  
-5. Open a Pull Request  
+5. Open a Pull Request
 
----
 
-## 🔔 Note  
-If the preview view does not appear in your Blade file, publish the vendor views using:  
-
-```bash
-php artisan vendor:publish --tag=laravel-comments-views
-```  
-
-Then run the build command again:  
-
-```bash
-npm run build
-```
-
+------------------------------ Thank you ------------------------------

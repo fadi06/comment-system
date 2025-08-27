@@ -10,11 +10,11 @@
                     <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-semibold">
                         @php
                             $userName = !empty($comment->user) ? $comment->user->name : $comment->guest_name;
-                        @endphp
+                            @endphp
                         {{ strtoupper(substr($userName, 0, 1)) }}
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-gray-800">{{ $userName }}</p>
+                        <p class="text-sm font-semibold text-gray-800 dark:text-gray-300">{{ $userName }}</p>
                         <p class="text-xs text-gray-500">{{ $comment->created_at->diffForHumans() }}</p>
                     </div>
                 </div>

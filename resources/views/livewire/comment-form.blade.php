@@ -1,6 +1,8 @@
 <div class="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-md dark:text-gray-400">
     <form wire:submit.prevent="submit"
         class="space-y-4 bg-white p-4 rounded-2xl shadow-sm dark:bg-gray-800 border border-gray-100 dark:border-gray-700 transition-all duration-300 mb-4"
+        x-on:keydown.window.ctrl.enter="$wire.submit()"
+        x-on:keydown.window.meta.enter="$wire.submit()"
         x-on:focus-comment-box.window="
             window.scrollTo({ top: 0, behavior: 'smooth' });
             $refs.commentBox.focus();
@@ -75,7 +77,7 @@
                 type="submit"
                 class="px-4 py-2 bg-gray-600 text-gray-100 dark:bg-indigo-600 dark:text-white rounded-xl hover:bg-gray-700 dark:hover:bg-indigo-700 transition cursor-pointer"
             >
-                Post Comment
+                {{ $isReplying ? "Reply" : "Post Comment" }}
             </button>
         </div>
     </form>
